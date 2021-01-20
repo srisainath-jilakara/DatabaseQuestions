@@ -61,3 +61,28 @@ ADD PRIMARY KEY (ID);
 ALTER TABLE Students 	 /* Set multiple columns as primary key */
 ADD CONSTRAINT PK_Student 	 /*Naming a Primary Key*/
 PRIMARY KEY (ID, FirstName);
+
+
+Difference between Delete and Truncate:
+Delete - Deletes a row in a table.
+       - can rollback
+       - DML
+       - slower than truncate.
+Truncate - Deletes all the rows in a table.
+         - faster 
+         - cannot roll back
+         - DDL
+Subsets of SQL - DDL - used to define database schema
+               - DML - used to manipulate database
+	       - DCL - Used to Controll permissions.(User access etc)
+	       - TCL - used for rollback operations etc.
+Char and Varchar- 
+		Char is used only for Strings of fixed length Eg - Char(10)-- Used only for Strings of length 10 .
+                 Varchar is used for Character Strings of variable length - Eg - varchar2(10) - Can store any length i.e 6,8,2 
+
+Clustered Index - One table can have only one Clustered Index.
+                - faster
+                - It rearranges the data in Sorting order using the column upon which clustered Index has been applied.
+Non Clustered - Slower than Clustered
+              - Table can have multiple Non Clustered Indexes 
+              - Doesnot alter the way the data is stored , Creates a separate object within a table which points back to original table rows after searching. 
